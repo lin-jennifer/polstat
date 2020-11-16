@@ -2,13 +2,13 @@
 % Please edit documentation in R/Tstats.R
 \name{Tstats}
 \alias{Tstats}
-\alias{t}
+\alias{t.eqvar}
 \alias{t.welch}
 \title{Two Sample T Test and Confidence Interval}
 \usage{
-t(x1, s1, n1, x2, s2, n2)
+\method{t}{eqvar}(x1, s1, n1, x2, s2, n2)
 
-t.welch(x1, s1, n1, x2, s2, n2)
+\method{t}{welch}(x1, s1, n1, x2, s2, n2)
 }
 \arguments{
 \item{x1}{mean for sample 1}
@@ -35,6 +35,6 @@ s2 = 0.4
 n1 = 30
 n2 = 25
 
-t(x1, s1, n1, x2, s2, n2)
+t.eqvar(x1, s1, n1, x2, s2, n2)
 
 }

@@ -13,6 +13,8 @@
 #' @param n1 number on sample 1
 #' @param n2 number on sample 2
 #'
+#' @importFrom stats pt
+#'
 #' @examples
 #' x1 = 5
 #' x2 = 8
@@ -21,10 +23,10 @@
 #' n1 = 30
 #' n2 = 25
 #'
-#' t(x1, s1, n1, x2, s2, n2)
+#' t.eqvar(x1, s1, n1, x2, s2, n2)
 #'
 #' @export
-t <- function(x1, s1, n1, x2, s2, n2){
+t.eqvar <- function(x1, s1, n1, x2, s2, n2){
   test  = "Two sample t test with Equal Variances"
   df    = n1 + n2 - 2
   se    = sqrt((((n1 - 1)*s1^2) + ((n2 - 1)*s2^2))/df)*sqrt((1/n1) + (1/n2))

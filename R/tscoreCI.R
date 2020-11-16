@@ -15,6 +15,8 @@
 #'
 #' @seealso zCI(), zCIupper(), zCIlower()
 #'
+#' @importFrom stats qt
+#'
 #' @examples
 #' x = 3.5
 #' sd = 2

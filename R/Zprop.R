@@ -19,6 +19,8 @@
 #' @param n1 number on sample 1
 #' @param n2 number on sample 2
 #'
+#' @importFrom stats pnorm
+#'
 #' @examples
 #' pi = 0.5
 #' n = 100

@@ -14,6 +14,7 @@
 #' @param sd Standard Deviation -- reference sdNA()
 #' @param n Number of participants
 #'
+#' @importFrom stats qnorm
 #'
 #' @examples
 #' x = 3.5
