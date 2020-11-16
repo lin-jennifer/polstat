@@ -23,10 +23,10 @@
 #' n1 = 30
 #' n2 = 25
 #'
-#' t.eqvar(x1, s1, n1, x2, s2, n2)
+#' tEqvar(x1, s1, n1, x2, s2, n2)
 #'
 #' @export
-t.eqvar <- function(x1, s1, n1, x2, s2, n2){
+tEqvar <- function(x1, s1, n1, x2, s2, n2){
   test  = "Two sample t test with Equal Variances"
   df    = n1 + n2 - 2
   se    = sqrt((((n1 - 1)*s1^2) + ((n2 - 1)*s2^2))/df)*sqrt((1/n1) + (1/n2))
@@ -46,7 +46,7 @@ t.eqvar <- function(x1, s1, n1, x2, s2, n2){
 
 #' @name Tstats
 #' @export
-t.welch <- function(x1, s1, n1, x2, s2, n2){
+tUneqvar <- function(x1, s1, n1, x2, s2, n2){
   test  = "Two sample t test with Unequal Variances"
   se    = sqrt(((s1^2)/n1) + ((s2^2)/n2))
   diff  = x1 - x2
