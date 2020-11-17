@@ -32,7 +32,7 @@ tEqvar <- function(x1, s1, n1, x2, s2, n2){
   se    = sqrt((((n1 - 1)*s1^2) + ((n2 - 1)*s2^2))/df)*sqrt((1/n1) + (1/n2))
   diff  = x1 - x2
   t     = diff/se
-  pval  = 2*pt(t, df)
+  pval  = 2*pt(t, df, lower.tail = FALSE)
   out   = data.frame(df, se, t, pval)
   cat("\nStatistical Test\n")
   cat(format(test), "\n")
@@ -51,7 +51,8 @@ tUneqvar <- function(x1, s1, n1, x2, s2, n2){
   se    = sqrt(((s1^2)/n1) + ((s2^2)/n2))
   diff  = x1 - x2
   t     = diff/se
-  out   = data.frame(se, t)
+  pval  = 2*pt(t, df, lower.tail = FALSE)
+  out   = data.frame(se, t, pval)
   cat("\nStatistical Test\n")
   cat(format(test), "\n")
   cat("Results:")
@@ -59,5 +60,6 @@ tUneqvar <- function(x1, s1, n1, x2, s2, n2){
 
   cat("Standard Error:", format(se), "\n")
   cat("T Score:", format(t), "\n")
+  cat("p value:", format(pval), "\n")
 }
 

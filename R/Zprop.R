@@ -55,7 +55,7 @@ z.prop <- function(p1, n1, p2, n2){
   se    = sqrt((phat*(1-phat))*((1/n1)+(1/n2)))
   diff  = p1 - p2
   z     = diff/se
-  pval  = 2*pnorm(z)
+  pval  = 2*pnorm(z, lower.tail = FALSE)
   cat("\nStatistical Test\n")
   cat(format(test), "\n")
   cat("Results:")
