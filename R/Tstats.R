@@ -24,6 +24,7 @@
 #' n2 = 25
 #'
 #' tEqvar(x1, s1, n1, x2, s2, n2)
+#' tUneqvar(x1, s1, n1, x2, s2, n2)
 #'
 #' @export
 tEqvar <- function(x1, s1, n1, x2, s2, n2){
